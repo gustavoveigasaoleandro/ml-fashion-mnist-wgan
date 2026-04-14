@@ -1,0 +1,8 @@
+.DS_Store
+.ipynb_checkpoints/
+.venv/
+__pycache__/
+fashionmnist_wgan_outputs/training_checkpoints/
+fashionmnist_wgan_outputs/*.h5
+fashionmnist_wgan_outputs/losses.png
+fashionmnist_wgan_outputs/training_summary.json
