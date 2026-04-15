@@ -1,41 +1,42 @@
-# Fashion-MNIST WGAN
+# ml-fashion-mnist-wgan
 
-Projeto acadêmico de modelagem generativa com WGAN/DCGAN aplicado ao dataset Fashion-MNIST.
+Projeto de estudo de redes generativas adversariais usando WGAN para gerar imagens no dominio Fashion-MNIST.
 
-## Conteúdo
+## Conteudo
 
-- `wgan_fashion_mnist_notebook.ipynb`: notebook original da atividade.
-- `train_wgan_fashionmnist.py`: script de treinamento em Python.
-- `fashionmnist_wgan_outputs/`: imagens geradas durante o treinamento.
+- `train_wgan_fashionmnist.py`: script de treinamento da WGAN.
+- `wgan_fashion_mnist_notebook.ipynb`: notebook de apoio ao experimento.
+- `fashionmnist_wgan_outputs/`: exemplos/artefatos gerados durante o experimento, quando presentes.
+- `.gitignore`: exclusoes de cache, ambiente virtual e artefatos temporarios.
 
-## Objetivo
+## Objetivo do Estudo
 
-Treinar um modelo generativo capaz de produzir novas imagens semelhantes às peças de roupa do Fashion-MNIST.
+O repositorio explora conceitos de modelos generativos:
 
-## Requisitos
+- treinamento adversarial com gerador e discriminador/critic;
+- uso de Fashion-MNIST como dominio visual simples;
+- geracao de amostras sinteticas;
+- acompanhamento qualitativo da evolucao do treinamento;
+- organizacao de experimento reprodutivel em script e notebook.
 
-- Python 3.10+
-- Jupyter Notebook ou JupyterLab
-- `tensorflow`
-- `matplotlib`
-- `numpy`
+## Base de Dados
 
-## Como executar o notebook
+O Fashion-MNIST e um dataset publico de imagens de pecas de roupa em escala de cinza. Ele e normalmente baixado automaticamente por bibliotecas de deep learning, entao a base bruta nao precisa ser mantida no repositorio.
+
+## Como Executar
+
+Instale as dependencias necessarias e rode:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install jupyter tensorflow matplotlib numpy
+python train_wgan_fashionmnist.py
+```
+
+Ou abra o notebook:
+
+```bash
 jupyter notebook wgan_fashion_mnist_notebook.ipynb
 ```
 
-## Como executar o script
+## Limitacoes
 
-```bash
-python3 train_wgan_fashionmnist.py
-```
-
-## Observações
-
-- O script salva imagens geradas em `fashionmnist_wgan_outputs/`.
-- Checkpoints e artefatos pesados futuros devem ser mantidos fora do versionamento.
+GANs sao sensiveis a hiperparametros, inicializacao e tempo de treino. Os resultados devem ser avaliados visualmente e tratados como experimento de estudo, nao como modelo generativo pronto para producao.
